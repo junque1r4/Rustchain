@@ -1,0 +1,220 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "RustChain API",
+    "description": "API for interacting with the RustChain blockchain",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Local RustChain node"
+    }
+  ],
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2023-04-12T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.1.0",
+  "resources": [
+    {
+      "_id": "req_get_blockchain",
+      "parentId": "fld_rustchain",
+      "modified": 1680000000000,
+      "created": 1680000000000,
+      "url": "{{ _.base_url }}/blockchain",
+      "name": "Get Entire Blockchain",
+      "description": "Retrieve the entire blockchain data",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_rustchain",
+      "parentId": "wrk_rustchain",
+      "modified": 1680000000000,
+      "created": 1680000000000,
+      "name": "RustChain API",
+      "description": "API endpoints for RustChain",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_rustchain",
+      "parentId": null,
+      "modified": 1680000000000,
+      "created": 1680000000000,
+      "name": "RustChain",
+      "description": "RustChain blockchain API",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_get_blockchain_stats",
+      "parentId": "fld_rustchain",
+      "modified": 1680000000000,
+      "created": 1680000000000,
+      "url": "{{ _.base_url }}/blockchain/stats",
+      "name": "Get Blockchain Stats",
+      "description": "Get statistics about the blockchain",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -990,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "_type": "request"
+    },
+    {
+      "_id": "req_validate_blockchain",
+      "parentId": "fld_rustchain",
+      "modified": 1680000000000,
+      "created": 1680000000000,
+      "url": "{{ _.base_url }}/blockchain/validate",
+      "name": "Validate Blockchain",
+      "description": "Validate the integrity of the blockchain",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -980,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "_type": "request"
+    },
+    {
+      "_id": "req_get_block_by_index",
+      "parentId": "fld_rustchain",
+      "modified": 1680000000000,
+      "created": 1680000000000,
+      "url": "{{ _.base_url }}/block/0",
+      "name": "Get Block by Index",
+      "description": "Get a specific block by its index in the chain",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -970,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "_type": "request"
+    },
+    {
+      "_id": "req_get_latest_block",
+      "parentId": "fld_rustchain",
+      "modified": 1680000000000,
+      "created": 1680000000000,
+      "url": "{{ _.base_url }}/block/latest",
+      "name": "Get Latest Block",
+      "description": "Get the most recent block in the chain",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -960,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "_type": "request"
+    },
+    {
+      "_id": "req_add_transaction",
+      "parentId": "fld_rustchain",
+      "modified": 1680000000000,
+      "created": 1680000000000,
+      "url": "{{ _.base_url }}/transaction",
+      "name": "Add Transaction",
+      "description": "Add a new transaction to the transaction pool",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"sender\": \"alice\",\n\t\"recipient\": \"bob\",\n\t\"amount\": 5.0,\n\t\"timestamp\": 1620000000\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -950,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "_type": "request"
+    },
+    {
+      "_id": "req_mine_block",
+      "parentId": "fld_rustchain",
+      "modified": 1680000000000,
+      "created": 1680000000000,
+      "url": "{{ _.base_url }}/mine",
+      "name": "Mine Block",
+      "description": "Mine a new block with transactions from the pool",
+      "method": "POST",
+      "body": {},
+      "parameters": [
+        {
+          "name": "num_transactions",
+          "value": "5",
+          "description": "Number of transactions to include in the block"
+        }
+      ],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -940,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "_type": "request"
+    },
+    {
+      "_id": "env_rustchain",
+      "parentId": "wrk_rustchain",
+      "modified": 1680000000000,
+      "created": 1680000000000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:8080"
+      },
+      "dataPropertyOrder": {
+        "&": ["base_url"]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1680000000000,
+      "_type": "environment"
+    }
+  ]
+}
