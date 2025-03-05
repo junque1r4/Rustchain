@@ -1,5 +1,5 @@
-# RustChain
 
+![WhatsApp Image 2025-03-05 at 02 27 38](https://github.com/user-attachments/assets/f096e053-6298-472e-8321-87124a09a041)
 # RustChain
 
 RustChain is a simple blockchain implementation written in Rust. It includes basic blockchain functionality such as block mining with proof-of-work, transaction management, and a REST API for interacting with the blockchain.
